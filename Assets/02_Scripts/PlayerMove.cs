@@ -6,11 +6,6 @@ public class PlayerMove : MonoBehaviour
 {
     public int mvSpeed = 5;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal") * mvSpeed * Time.deltaTime;
