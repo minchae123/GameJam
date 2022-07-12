@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float gameTime = 0;
+    public float gameTime = 0f;
     public Text timeTxt;
 
     private void Update()
     {
         gameTime += Time.deltaTime;
-        timeTxt.text = "½Ã°£ : " + (int)gameTime; 
+        timeTxt.text = " " + gameTime.ToString("F2"); 
     }
 }

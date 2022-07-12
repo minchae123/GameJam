@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackMove : MonoBehaviour
 {
-    float moveSpeed = 6f;
+    float moveSpeed = 4f;
 
     private void Update()
     {

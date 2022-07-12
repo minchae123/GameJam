@@ -22,7 +22,7 @@ public class Spawner : MonoBehaviour
         {
             int r = Random.Range(0, 6);
             float x = Random.Range(11f, 15.1f);
-            float y = Random.Range(0.3f, 6.2f);
+            float y = Random.Range(1.2f, 6.2f);
             Vector3 pos = new Vector3(x, y, 0);
             Instantiate(clouds[r], pos, Quaternion.identity);
 
