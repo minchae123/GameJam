@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 736823423509241414}
   - component: {fileID: 8952421779636017033}
   - component: {fileID: -7575069923894076786}
+  - component: {fileID: 687692750716090848}
   m_Layer: 0
   m_Name: Cake
   m_TagString: Cake
@@ -97,8 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 204eb03329e2d63409fbd0e5cdf6cd5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ClickText: {fileID: 0}
-  ClickSlider: {fileID: 0}
 --- !u!114 &8952421779636017033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +127,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 12.5
+--- !u!114 &687692750716090848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736823423509241415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 093d3a58de2627742952ffed0d8b6d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 20
+  hpslider: {fileID: 0}
