@@ -21,4 +21,9 @@ public class ObstacleSpawn : MonoBehaviour
             yield return new WaitForSeconds(r);
         }
     }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }

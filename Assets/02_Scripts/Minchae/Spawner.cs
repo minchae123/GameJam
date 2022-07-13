@@ -21,8 +21,8 @@ public class Spawner : MonoBehaviour
             Vector3 pos = new Vector3(x, y, 0);
             Instantiate(clouds[r], pos, Quaternion.identity);
 
-            float c = Random.Range(1.0f, 1.9f);
-            yield return new WaitForSeconds(c);
+            float count = Random.Range(1.0f, 1.9f);
+            yield return new WaitForSeconds(count);
         }
     }
 }

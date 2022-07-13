@@ -23,7 +23,7 @@ public class PlayerJump : MonoBehaviour
             {
                 rigid.velocity = new Vector3(0, jump, 0);
                 jumpCount++;
-                ani.SetTrigger("onJump");
+                ani.Play("DDongJump");
             }
         }
     }
@@ -33,7 +33,7 @@ public class PlayerJump : MonoBehaviour
         if (collision.gameObject.tag.CompareTo("Land") == 0)
         {
             jumpCount = 0;
-            ani.SetTrigger("onRun");
+            ani.Play("DDongRun");
         }
     }
 }

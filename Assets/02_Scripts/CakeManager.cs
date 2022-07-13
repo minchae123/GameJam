@@ -7,5 +7,12 @@ using UnityEngine.UI;
 public class CakeManager : MonoBehaviour
 {
     public Slider hpSlider;
-    public TextMeshProUGUI clickTxt;
+    public GameObject clickTxt;
+
+    public GameObject sslider;
+
+    private void Start()
+    {
+        sslider.SetActive(false);    
+    }
 }
