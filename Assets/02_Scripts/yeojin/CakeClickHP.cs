@@ -8,22 +8,23 @@ public class CakeClickHP : MonoBehaviour
     [SerializeField]
     private float maxHP = 20;
     private float currentHP;
-    private Cake cake;
-    private SpriteRenderer spriteRenderer;
 
-    [SerializeField]
-    GameObject hpslider;
+    private SpriteRenderer spriteRenderer;
+    CakeMove cakeMove;
+
+    CakeManager cakeManager;
 
     private void Start()
     {
+        cakeManager = GameObject.Find("UIManager").GetComponent<CakeManager>();
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        hpslider = GameObject.Find("Clickslider");
+        cakeMove = FindObjectOfType<CakeMove>();
     }
 
     private void Update()
     {
-        hpslider.GetComponent<Slider>().value = currentHP;
+        cakeManager.hpSlider.value = currentHP;
     }
     
     public void Takedam(float click)
@@ -35,9 +36,9 @@ public class CakeClickHP : MonoBehaviour
 
         if(currentHP<=0)
         {
-            cake.Ondie();
+            Destroy(gameObject);
+            cakeManager.hpSlider.value = maxHP;
         }
-
     }
 
     private IEnumerator Hit()

@@ -11,11 +11,6 @@ public class Spawner : MonoBehaviour
         StartCoroutine("SpawnClouds");    
     }
 
-    private void Update()
-    {
-
-    }
-
     IEnumerator SpawnClouds()
     {
         while (true)

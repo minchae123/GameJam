@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Cakeattack : MonoBehaviour
 {
-    
     [SerializeField] private GameObject cakePrefab;
     [SerializeField] private GameObject clickslider;
     [SerializeField] private Transform canvasTras;
@@ -32,7 +31,7 @@ public class Cakeattack : MonoBehaviour
         }
     }
 
-    private void SpawnSlider(GameObject cake)
+    /*private void SpawnSlider(GameObject cake)
     {
         GameObject sliderClone = Instantiate(clickslider);
 
@@ -40,6 +39,5 @@ public class Cakeattack : MonoBehaviour
         sliderClone.transform.localScale = Vector3.one;
 
         sliderClone.GetComponent<SliderAuto>().Setup(cake.transform);
-
-    }    
+    }  */ // 슬라이더가 케이크를 따라다님
 }
