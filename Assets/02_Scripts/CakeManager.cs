@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class CakeManager : MonoBehaviour
 {
-    public Slider hpSlider;
     public GameObject clickTxt;
 
     public GameObject sslider;

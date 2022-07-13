@@ -15,7 +15,7 @@ public class CakeMove : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, destination, 0.03f);
+        transform.position = Vector3.MoveTowards(transform.position, destination, 0.04f);
     }
 
 }

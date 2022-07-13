@@ -12,9 +12,13 @@ public class CakeClickHP : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     CakeManager cakeManager;
     CakeSpawner cakeSpawner;
+    Height heightt;
+
+    private Slider hpBar;
 
     private void Start()
     {
+        heightt = GameObject.Find("Manager").GetComponent<Height>();
         cakeManager = GameObject.Find("CakeManage").GetComponent<CakeManager>();
         cakeSpawner = GameObject.Find("CakeSpawner").GetComponent<CakeSpawner>();
         currentHP = maxHP;
@@ -23,9 +27,14 @@ public class CakeClickHP : MonoBehaviour
 
     private void Update()
     {
-        cakeManager.hpSlider.value = currentHP;
+        if(hpBar == null)
+        {
+            return;
+        }
 
-        if (cakeManager.hpSlider.value < 20)
+        hpBar.value = currentHP;
+
+        if (hpBar.value < 20)
         {
             currentHP += Time.deltaTime * 2;
         }
@@ -39,6 +48,7 @@ public class CakeClickHP : MonoBehaviour
 
         if(currentHP < 0)
         {
+            heightt.height -= 5f;
             NextCake();
             Destroy(gameObject);
         }
@@ -54,7 +64,12 @@ public class CakeClickHP : MonoBehaviour
 
     private void NextCake()
     {
-        cakeManager.hpSlider.value = maxHP;
-        cakeManager.sslider.SetActive(false);
+        hpBar.value = maxHP;
+        Destroy(hpBar.gameObject);
+    }
+
+    public void SetHpBar(Slider hpBar)
+    {
+        this.hpBar = hpBar;
     }
 }

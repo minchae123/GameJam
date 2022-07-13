@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CakeSpawner : MonoBehaviour
 {
@@ -17,9 +18,9 @@ public class CakeSpawner : MonoBehaviour
     float posY = -3.835135f;
 
     // 텍스트 스폰
-    float posX2 = -6.55f;
-    float posY2 = -3.0f;
-
+    float posX2 = -3.6f;
+    float posY2 = -1.2f;
+    public Transform pos;
     CakeManager cakeManager;
 
     public bool isSpawn = true;
@@ -30,7 +31,8 @@ public class CakeSpawner : MonoBehaviour
     private void Start()
     {
         cakeManager = GameObject.Find("CakeManage").GetComponent<CakeManager>();
-        StartCoroutine("SpawnCake");    
+        StartCoroutine("SpawnCake");
+        
     }
 
     private void Update()
@@ -47,18 +49,21 @@ public class CakeSpawner : MonoBehaviour
         // 케이크 생성
         Vector3 CakeSpawn = new Vector3(posX, posY, 0);
         cakeClone = Instantiate(CakePref, CakeSpawn, Quaternion.identity);
+        pos=cakeClone.transform.GetChild(0);
         currentCakeClickHP = cakeClone.GetComponent<CakeClickHP>();
-        //SpawnCakeHPSlider(cakeClone);
+        currentCakeClickHP.SetHpBar(SpawnCakeHPSlider(cakeClone));
 
-        yield return new WaitForSeconds(2.5f); // 4초간 대기
+        yield return new WaitForSeconds(0.5f); // 4초간 대기
 
         // 텍스트 생성
-        Vector3 TextSpawn = new Vector3(posX2, posY2, 0);
-        GameObject CakeText = Instantiate(ClickText, TextSpawn, Quaternion.identity);
+        /*Vector3 TextSpawn = new Vector3(posX2, posY2, 0);
+        GameObject CakeText = Instantiate(ClickText, pos.position, Quaternion.identity);*/
         cakeManager.sslider.SetActive(true);
+       //cakeManager.sslider.GetComponent<SliderAuto>().Setup(cakeClone.transform);
+
         yield return new WaitForSeconds(3.0f); // 3초간 대기
 
-        Destroy(CakeText); // 텍스트 오브젝트 삭제
+       // Destroy(CakeText); // 텍스트 오브젝트 삭제
 
         // 기다림 + 재생성
         float spawnT = Random.Range(minST, maxST);
@@ -67,15 +72,16 @@ public class CakeSpawner : MonoBehaviour
 
     }
 
-/*    private void SpawnCakeHPSlider(GameObject Cake)
+    private Slider SpawnCakeHPSlider(GameObject Cake)
     {
         GameObject sliderClone = Instantiate(CakeHPslider);
 
         sliderClone.transform.SetParent(canvasTrans);
-        sliderClone.transform.localScale = Vector3.one;
+        //sliderClone.transform.localScale = Vector3.one;
 
         sliderClone.GetComponent<SliderAuto>().Setup(Cake.transform);
 
+        return sliderClone.GetComponent<Slider>();
     }
-*/
+
 }
