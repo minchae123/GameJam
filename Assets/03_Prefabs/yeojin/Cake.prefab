@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 736823423509241412}
   - component: {fileID: 736823423509241413}
-  - component: {fileID: 736823423509241414}
-  - component: {fileID: 8952421779636017033}
   - component: {fileID: -7575069923894076786}
   - component: {fileID: 687692750716090848}
+  - component: {fileID: 7907322501088557359}
+  - component: {fileID: -4837350765097262235}
   m_Layer: 0
   m_Name: Cake
   m_TagString: Cake
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: de0c7caa77fb38e4d9d0e3fa64bb74a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -86,31 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &736823423509241414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736823423509241415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 204eb03329e2d63409fbd0e5cdf6cd5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8952421779636017033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 736823423509241415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65c0db0965ff16c45a1bf81a3f2113e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  click: 1
 --- !u!58 &-7575069923894076786
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -140,4 +115,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 20
-  hpslider: {fileID: 0}
+  currentHP: 0
+--- !u!114 &7907322501088557359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736823423509241415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 204eb03329e2d63409fbd0e5cdf6cd5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  x: -4
+--- !u!114 &-4837350765097262235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 736823423509241415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65c0db0965ff16c45a1bf81a3f2113e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: 1

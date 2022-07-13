@@ -17,8 +17,8 @@ public class CakeSpawner : MonoBehaviour
     float posY = -3.835135f;
 
     // 텍스트 스폰
-    float posX2 = -6.55f;
-    float posY2 = -3.0f;
+    float posX2 = -3.6f;
+    float posY2 = -1.2f;
 
     CakeManager cakeManager;
 

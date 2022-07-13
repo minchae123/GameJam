@@ -3,16 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class height : MonoBehaviour
+public class Height: MonoBehaviour
 {
-    public float Height  = 75.0f;
-    public Text heighttext;
+    public float height  = 75.0f;
+    public Text heighttxt;
 
-    // Update is called once per frame
     void Update()
     {
-        Height -= Time.deltaTime *0.1f;
-        heighttext.text = " " + Height.ToString("F2");
+        height -= Time.deltaTime *0.1f;
+        heighttxt.text = "¸ö¹«°Ô : " + height.ToString("F2") + "kg";
     }
 }

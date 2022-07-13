@@ -1,37 +1,31 @@
 fileFormatVersion: 2
-guid: 64664fedd37543b45be3e99de957bfc7
+guid: 559229add8f1455418e832aa493ac4d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5170674366925059886
-    second: DDong_0
+      213: -4141117550167992882
+    second: DDongJump 1_0
   - first:
-      213: 1262406583516643126
-    second: DDong_1
+      213: 1388538838186215708
+    second: DDongJump 1_1
   - first:
-      213: -858508064777795094
-    second: DDong_2
+      213: 2976637413477619868
+    second: DDongJump 1_2
   - first:
-      213: 3861662811094038370
-    second: DDong_3
+      213: -1673638992663976912
+    second: DDongJump 1_3
   - first:
-      213: -5625897884118010351
-    second: DDong_4
+      213: 7494545072329913835
+    second: DDongJump 1_4
   - first:
-      213: -9101213675528964220
-    second: DDong_5
+      213: 6940326175228781420
+    second: DDongJump 1_5
   - first:
-      213: -377298648827869223
-    second: DDong_6
+      213: -8882849085224485458
+    second: DDongJump 1_6
   - first:
-      213: -4008622265186265760
-    second: DDong_7
-  - first:
-      213: -5614727083542559996
-    second: DDong_8
-  - first:
-      213: -3472241505205900074
-    second: DDong_9
+      213: -4070660718635976913
+    second: DDongJump 1_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -98,7 +92,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +104,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -122,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DDong_0
+      name: DDongJump 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -159,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2739c9f0fce1c740800000000000000
-      internalID: 5170674366925059886
+      spriteID: ec5d919578bc786c0800000000000000
+      internalID: -4141117550167992882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_1
+      name: DDongJump 1_1
       rect:
         serializedVersion: 2
         x: 100
@@ -180,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63fbf946918f48110800000000000000
-      internalID: 1262406583516643126
+      spriteID: c194cee67b4154310800000000000000
+      internalID: 1388538838186215708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_2
+      name: DDongJump 1_2
       rect:
         serializedVersion: 2
         x: 200
@@ -201,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae98c12b677f514f0800000000000000
-      internalID: -858508064777795094
+      spriteID: c989877e4f32f4920800000000000000
+      internalID: 2976637413477619868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_3
+      name: DDongJump 1_3
       rect:
         serializedVersion: 2
         x: 300
@@ -222,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267b891edd1679530800000000000000
-      internalID: 3861662811094038370
+      spriteID: 0346508143a06c8e0800000000000000
+      internalID: -1673638992663976912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_4
+      name: DDongJump 1_4
       rect:
         serializedVersion: 2
         x: 400
@@ -243,14 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11636828eabcce1b0800000000000000
-      internalID: -5625897884118010351
+      spriteID: be5f0651909f10860800000000000000
+      internalID: 7494545072329913835
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_5
+      name: DDongJump 1_5
       rect:
         serializedVersion: 2
         x: 500
@@ -264,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4873b25e16ef1b180800000000000000
-      internalID: -9101213675528964220
+      spriteID: c636bdb82edf05060800000000000000
+      internalID: 6940326175228781420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_6
+      name: DDongJump 1_6
       rect:
         serializedVersion: 2
         x: 600
@@ -285,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d7416eb0e093caf0800000000000000
-      internalID: -377298648827869223
+      spriteID: ead7ac102d7c9b480800000000000000
+      internalID: -8882849085224485458
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DDong_7
+      name: DDongJump 1_7
       rect:
         serializedVersion: 2
         x: 700
@@ -306,50 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 065d9d4d9438e58c0800000000000000
-      internalID: -4008622265186265760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DDong_8
-      rect:
-        serializedVersion: 2
-        x: 800
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4034ea2377b7412b0800000000000000
-      internalID: -5614727083542559996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: DDong_9
-      rect:
-        serializedVersion: 2
-        x: 900
-        y: 0
-        width: 100
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6dca5db6fbe10dfc0800000000000000
-      internalID: -3472241505205900074
+      spriteID: f27f098c4ab1287c0800000000000000
+      internalID: -4070660718635976913
       vertices: []
       indices: 
       edges: []
