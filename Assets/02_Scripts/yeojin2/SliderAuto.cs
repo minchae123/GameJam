@@ -26,7 +26,7 @@ public class SliderAuto : MonoBehaviour
         }
 
         Vector3 tempPosition = targetTransform.localPosition;
-        tempPosition.x -= 9;
+        tempPosition.x -= 8.8f;
         tempPosition.y -= 5;
 
         Vector3 screenpos = Camera.main.WorldToScreenPoint(tempPosition);

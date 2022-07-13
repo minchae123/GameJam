@@ -48,7 +48,7 @@ public class CakeClickHP : MonoBehaviour
 
         if(currentHP < 0)
         {
-            heightt.height -= 5f;
+            heightt.height -= 2.5f;
             NextCake();
             Destroy(gameObject);
         }

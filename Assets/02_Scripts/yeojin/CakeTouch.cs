@@ -24,7 +24,6 @@ public class CakeTouch : MonoBehaviour
                 if (rayHit.collider.CompareTag("Cake"))
                 {
                     cakeHP.Takedam(click);
-                    Debug.Log("Ccc");
                 }
             }
         }

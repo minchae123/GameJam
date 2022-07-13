@@ -14,9 +14,8 @@ public class ObstacleSpawn : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("방해 생성");
-            float r = Random.Range(0f, 10f);
-            int num = Random.Range(0,4);
+            float r = Random.Range(1f, 15f);
+            int num = Random.Range(0, 9);
             Vector3 pos = new Vector3(10.36f, -3.7f, 0);
             Instantiate(yummy[num], pos, Quaternion.identity);
             yield return new WaitForSeconds(r);

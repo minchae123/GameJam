@@ -16,7 +16,7 @@ public class Sweet : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("tru");
-            heightt.height += 1;
+            heightt.height += 1.5f;
             Destroy(gameObject);
         }
     }
