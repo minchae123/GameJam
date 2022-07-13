@@ -13,6 +13,6 @@ public class height : MonoBehaviour
     void Update()
     {
         Height -= Time.deltaTime *0.1f;
-        heighttext.text = " " + Height.ToString("F2");
+        heighttext.text = "¸ö¹«°Ô : " + Height.ToString("F2");
     }
 }
