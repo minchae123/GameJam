@@ -5,7 +5,7 @@ using UnityEngine;
 public class SliderAuto : MonoBehaviour
 {
     [SerializeField] 
-    private Vector3 distance = Vector3.down * 35.0f;
+    private Vector3 distance = Vector3.up * 135.0f;
 
     private Transform targetTransform;
     private RectTransform rectTransform;
@@ -17,15 +17,19 @@ public class SliderAuto : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    private void LateUpdate()
+    private void Update()
     {
         if(targetTransform==null)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
 
-        Vector3 screenpos = Camera.main.WorldToScreenPoint(targetTransform.position);
-        rectTransform.position = screenpos + distance;
+        Vector3 tempPosition = targetTransform.localPosition;
+        tempPosition.x -= 9;
+        tempPosition.y -= 5;
+
+        Vector3 screenpos = Camera.main.WorldToScreenPoint(tempPosition);
+        rectTransform.localPosition = screenpos + distance;
     }
 }
