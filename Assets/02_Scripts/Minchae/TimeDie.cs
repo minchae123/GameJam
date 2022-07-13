@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Clouds : MonoBehaviour
+public class TimeDie : MonoBehaviour
 {
     float time = 0;
+
     private void Update()
     {
         time += Time.deltaTime;

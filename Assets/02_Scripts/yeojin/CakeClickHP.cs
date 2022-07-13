@@ -5,39 +5,43 @@ using UnityEngine.UI;
 
 public class CakeClickHP : MonoBehaviour
 {
-    [SerializeField]
-    private float maxHP = 20;
-    private float currentHP;
-    private Cake cake;
-    private SpriteRenderer spriteRenderer;
+  
+    public float maxHP = 20;
+    public float currentHP;
 
-    [SerializeField]
-    GameObject hpslider;
+    private SpriteRenderer spriteRenderer;
+    CakeManager cakeManager;
+    CakeSpawner cakeSpawner;
 
     private void Start()
     {
+        cakeManager = GameObject.Find("CakeManage").GetComponent<CakeManager>();
+        cakeSpawner = GameObject.Find("CakeSpawner").GetComponent<CakeSpawner>();
         currentHP = maxHP;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        hpslider = GameObject.Find("Clickslider");
     }
 
     private void Update()
     {
-        hpslider.GetComponent<Slider>().value = currentHP;
+        cakeManager.hpSlider.value = currentHP;
+
+        if (cakeManager.hpSlider.value < 20)
+        {
+            currentHP += Time.deltaTime * 2;
+        }
     }
     
     public void Takedam(float click)
     {
         currentHP -= click;
-
         StopCoroutine("Hit");
         StartCoroutine("Hit");
 
-        if(currentHP<=0)
+        if(currentHP < 0)
         {
-            cake.Ondie();
+            NextCake();
+            Destroy(gameObject);
         }
-
     }
 
     private IEnumerator Hit()
@@ -46,5 +50,11 @@ public class CakeClickHP : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
 
         spriteRenderer.color = Color.white;
+    }
+
+    private void NextCake()
+    {
+        cakeManager.hpSlider.value = maxHP;
+        cakeManager.sslider.SetActive(false);
     }
 }
