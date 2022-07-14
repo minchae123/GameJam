@@ -15,12 +15,18 @@ public class PlayerJump : MonoBehaviour
     Rigidbody2D rigid;
     Animator ani;
     Height heightt;
+    Timer timer;
     public RuntimeAnimatorController[] change;
     private RuntimeAnimatorController currentAnimationController;
+    public ObstacleSpawn obstacleSpawn;
+    public VeSpawn veSpawn;
     //bool isChange = false;
 
     private void Start()
     {
+        veSpawn = GameObject.Find("Manager").GetComponent<VeSpawn>();
+        timer = GameObject.Find("Manager").GetComponent<Timer>();
+        obstacleSpawn = GameObject.Find("Manager").GetComponent<ObstacleSpawn>();
         heightt = GameObject.Find("Manager").GetComponent<Height>();
         rigid = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
@@ -28,14 +34,46 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        if(heightt.height <= 44f)
+        if (heightt.height <= 44f)
         {
             transform.position += Vector3.right * 5f * Time.deltaTime;
+            obstacleSpawn.enabled = false;
+            veSpawn.enabled = false;
+            heightt.lose = 0;
+            timer.lose = 0;
+            foreach(GameObject cake in GameObject.FindGameObjectsWithTag("Cake"))
+            {
+                Destroy(cake);
+            }
+            foreach (GameObject vet in GameObject.FindGameObjectsWithTag("Vegetable"))
+            {
+                Destroy(vet);
+            }
+            foreach (GameObject yum in GameObject.FindGameObjectsWithTag("Yummy"))
+            {
+                Destroy(yum);
+            }
+            foreach(GameObject sli in GameObject.FindGameObjectsWithTag("Clickslider"))
+            {
+                Destroy(sli);
+            }
         }
+
         if(transform.position.x > 11)
         {
-            Debug.Log("¿¹»Û ¿£µù");
-            //SceneManager.LoadScene();
+            SceneManager.LoadScene(4);
+            /*if(timer.gameTime <= 110)
+            {
+                SceneManager.LoadScene(7);
+            }
+            if(timer.gameTime >=111 && timer.gameTime <= 140)
+            {
+                SceneManager.LoadScene(8);
+            }
+            if(timer.gameTime >= 141 && timer.gameTime <= 180)
+            {
+                SceneManager.LoadScene(6);
+            }*/
         }
 
         ChangeAni();

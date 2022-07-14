@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -3421810687254319071}
   m_Layer: 0
   m_Name: Pudding
-  m_TagString: Untagged
+  m_TagString: Yummy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,7 +104,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 2.4615386, y: 2.4615386}
     newSize: {x: 0.8125, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60e05f9dc016cc14f9dedfc803c31462, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 4
 --- !u!114 &4908630798888747776
 MonoBehaviour:
   m_ObjectHideFlags: 0

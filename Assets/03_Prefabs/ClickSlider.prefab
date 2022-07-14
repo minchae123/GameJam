@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4563297045360793369}
   m_Layer: 5
   m_Name: ClickSlider
-  m_TagString: Untagged
+  m_TagString: Clickslider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

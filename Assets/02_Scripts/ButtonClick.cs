@@ -19,7 +19,7 @@ public class ButtonClick : MonoBehaviour
     public void GoStart()
     {
         Debug.Log("처음으로");
-        //SceneManager.LoadScene("");
+        SceneManager.LoadScene(0);
     }
 
     public void Restart()

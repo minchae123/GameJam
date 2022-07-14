@@ -8,16 +8,22 @@ public class Timer : MonoBehaviour
 {
     public float gameTime = 0f;
     public Text timeTxt;
+    public float lose = 1f;
+    //Height heightt;
+    private void Start()
+    {
+      //  heightt = GameObject.Find("Manager").GetComponent<Height>();
+    }
 
     private void Update()
     {
-        gameTime += Time.deltaTime;
+        gameTime += Time.deltaTime * lose;
         timeTxt.text = " " + gameTime.ToString("F2"); 
 
-        if(gameTime >= 120)
+        if(gameTime > 180)
         {
+            SceneManager.LoadScene(5);
             Debug.Log("게임 종료");
-            //SceneManager.LoadScene("GameOver");
         }
     }
 

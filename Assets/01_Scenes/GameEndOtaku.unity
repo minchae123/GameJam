@@ -669,7 +669,7 @@ MonoBehaviour:
   CurrentSentence: 
   a: 0
   typingSpeed: 0.1
-  maxDialogue: 13
+  maxDialogue: 5
   b: GameStart
 --- !u!225 &1037741838
 CanvasGroup:

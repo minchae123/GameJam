@@ -8,6 +8,8 @@ TagManager:
   - ClickText
   - Clickslider
   - Cake
+  - Vegetable
+  - Yummy
   layers:
   - Default
   - TransparentFX

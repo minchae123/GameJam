@@ -8,7 +8,6 @@ public class KeyManager : MonoBehaviour
 {
     public GameObject esc;
     private int escMenu = 0;
-
     Height hheight;
 
     private void Start()

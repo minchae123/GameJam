@@ -7,7 +7,6 @@ public class StorySentences : MonoBehaviour
 {
     public string[] sentences;
 
-
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))

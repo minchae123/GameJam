@@ -31,6 +31,6 @@ public class SliderAuto : MonoBehaviour
 
         Vector3 screenpos = Camera.main.WorldToScreenPoint(tempPosition);
         rectTransform.localPosition = screenpos + distance;
-        transform.SetAsFirstSibling();
+        transform.SetAsFirstSibling() ;
     }
 }
