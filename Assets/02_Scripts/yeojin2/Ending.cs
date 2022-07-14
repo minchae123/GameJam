@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Ending : MonoBehaviour
 {
-
     int otakusave;
     int normalsave;
     int jonjalsave;
@@ -14,17 +13,24 @@ public class Ending : MonoBehaviour
     public GameObject jonjalsilu;
     public GameObject normalsilu;
 
-    public void Save()
+    void Save()
     {
         otakusave = PlayerPrefs.GetInt("otaku");
         normalsave = PlayerPrefs.GetInt("normal");
         jonjalsave = PlayerPrefs.GetInt("jonjal");
     }
 
-
     void Start()
     {
-        if(otakusave>=1)
+        Save();
+
+        otakusave = PlayerPrefs.GetInt("otaku");
+        normalsave = PlayerPrefs.GetInt("normal");
+        jonjalsave = PlayerPrefs.GetInt("jonjal");
+
+        Debug.Log(jonjalsave);
+
+        if (otakusave>=1)
         {
             otakusilu.SetActive(false);
         }
@@ -36,7 +42,7 @@ public class Ending : MonoBehaviour
 
         if(jonjalsave>=1)
         {
-            normalsilu.SetActive(false);
+            jonjalsilu.SetActive(false);
         }
     }
 

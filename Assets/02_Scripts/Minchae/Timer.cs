@@ -23,6 +23,7 @@ public class Timer : MonoBehaviour
 
         if(gameTime > 180)
         {
+
             SceneManager.LoadScene(5);
             Debug.Log("게임 종료");
         }
