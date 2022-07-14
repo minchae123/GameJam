@@ -17,7 +17,7 @@ public class Talking : MonoBehaviour, IPointerDownHandler
     public string CurrentSentence;
 
     private bool istype;
-    private float a=0.0f;
+    public float a=1.0f;
 
     public float typingSpeed = 0.1f;
 
@@ -91,17 +91,19 @@ public class Talking : MonoBehaviour, IPointerDownHandler
         {
             nextText.SetActive(true);
             istype = false;
-            
         }
- 
 
-        if(a>=13)
-            SceneManager.LoadScene(3);
+        if(a>13)
+            SceneManager.LoadScene(2);
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if(!istype)
+        if (!istype)
+        {
             Nextsentences();
+            
+        }
     }
 }

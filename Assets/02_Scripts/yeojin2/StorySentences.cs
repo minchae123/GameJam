@@ -1,13 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StorySentences : MonoBehaviour
 {
     public string[] sentences;
+    private Image image;
 
-    private void OnMouseDown()
+    private void Start()
     {
-        Talking.instance.Ondialogue(sentences);
+        image = GetComponent<Image>();
     }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)&&image.color.a<=30)
+            Talking.instance.Ondialogue(sentences);
+    }
+
 }
