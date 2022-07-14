@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class clickone : MonoBehaviour
+public class OneCLick : MonoBehaviour
 {
     public GameObject click;
 
