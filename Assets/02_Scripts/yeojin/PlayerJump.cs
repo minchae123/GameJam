@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerJump : MonoBehaviour
 {
+    public Text changeTxt;
     public float jump;
     //public float jump2;
     int jumpCount;
@@ -13,11 +17,10 @@ public class PlayerJump : MonoBehaviour
     Height heightt;
     public RuntimeAnimatorController[] change;
     private RuntimeAnimatorController currentAnimationController;
-    bool isChange = false;
+    //bool isChange = false;
 
     private void Start()
     {
-        
         heightt = GameObject.Find("Manager").GetComponent<Height>();
         rigid = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
@@ -25,9 +28,20 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        ChangeAni();
-        if(currentAnimationController != ani.runtimeAnimatorController )
+        if(heightt.height <= 44f)
         {
+            transform.position += Vector3.right * 5f * Time.deltaTime;
+        }
+        if(transform.position.x > 11)
+        {
+            Debug.Log("¿¹»Û ¿£µù");
+            //SceneManager.LoadScene();
+        }
+
+        ChangeAni();
+        if(currentAnimationController != ani.runtimeAnimatorController)
+        {
+            StartCoroutine(Size());
             ani.runtimeAnimatorController = currentAnimationController;    
         }
         if (Input.GetKeyDown(KeyCode.Space))
@@ -66,6 +80,18 @@ public class PlayerJump : MonoBehaviour
             currentAnimationController = change[2];
         }
     }
+
+    IEnumerator Size()
+    {
+        changeTxt.gameObject.SetActive(true);
+        changeTxt.DOColor(Color.red, 1f);
+        yield return new WaitForSeconds(0.3f);
+        changeTxt.DOColor(Color.white, 1f);
+        yield return new WaitForSeconds(0.3f);
+        changeTxt.DOColor(Color.red, 1f);
+        changeTxt.gameObject.SetActive(false);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.CompareTo("Land") == 0)

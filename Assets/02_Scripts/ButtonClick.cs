@@ -6,10 +6,15 @@ using UnityEngine.UI;
 
 public class ButtonClick : MonoBehaviour
 {
+    public GameObject explain;
+
     public void ExitGame()
     {
+        Debug.Log("³¡");
         Application.Quit();
     }
+
+    
 
     public void GoStart()
     {
@@ -21,6 +26,16 @@ public class ButtonClick : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Explain()
+    {
+        explain.SetActive(true);
+    }
+
+    public void ExplainEsc()
+    {
+        explain.SetActive(false);
     }
 
 }
