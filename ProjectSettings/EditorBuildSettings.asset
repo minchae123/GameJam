@@ -21,18 +21,21 @@ EditorBuildSettings:
     path: Assets/01_Scenes/GamePlay 1.unity
     guid: 09d45290d522d4b4c9e9b2581a90505f
   - enabled: 1
-    path: Assets/01_Scenes/GameClear.unity
+    path: Assets/01_Scenes/Ending.unity
+    guid: e55ec62d9d6cc744ea56dac8c8939460
+  - enabled: 1
+    path: Assets/01_Scenes/GameEndSolo.unity
     guid: 4e19d757bad0d9449970ac561de1010b
   - enabled: 1
-    path: Assets/01_Scenes/GameEnd1.unity
+    path: Assets/01_Scenes/GameEndOtaku.unity
     guid: d3c756bf636a26f4da19d24d51460483
   - enabled: 1
-    path: Assets/01_Scenes/GameEnd2.unity
+    path: Assets/01_Scenes/GameEndBest.unity
     guid: 1445e0e49cdfb8b468ee9a699499e444
   - enabled: 1
-    path: Assets/01_Scenes/GameEnd3.unity
+    path: Assets/01_Scenes/GameEndNormal.unity
     guid: 5571ca5e401f2db40a0e7b4a24321a81
-  - enabled: 1
-    path: Assets/01_Scenes/GameOver.unity
-    guid: e64b7e1bf7004df49b95d60838d26549
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

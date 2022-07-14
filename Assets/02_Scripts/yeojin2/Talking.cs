@@ -17,9 +17,12 @@ public class Talking : MonoBehaviour, IPointerDownHandler
     public string CurrentSentence;
 
     private bool istype;
-    public float a=1.0f;
+    public float a=0.0f;
 
     public float typingSpeed = 0.1f;
+    public int maxDialogue=13;
+
+    public string b;
 
     public static Talking instance;
 
@@ -93,9 +96,11 @@ public class Talking : MonoBehaviour, IPointerDownHandler
             istype = false;
         }
 
-        if(a>13)
-            SceneManager.LoadScene(2);
-
+        if (a > maxDialogue)
+        {
+            SceneLoader(b);
+            a = 0;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -106,4 +111,9 @@ public class Talking : MonoBehaviour, IPointerDownHandler
             
         }
     }
+    public void SceneLoader(string b)
+    {
+        SceneManager.LoadScene(b);
+    }
+
 }
