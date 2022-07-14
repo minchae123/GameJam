@@ -37,7 +37,7 @@ public class CakeClickHP : MonoBehaviour
             currentHP += Time.deltaTime * 1;
         }
         curTime += Time.deltaTime;
-        if(curTime > 7)
+        if(curTime > 10)
         {
             heightt.height += 3f;
             NextCake();

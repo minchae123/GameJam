@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 008864b21428bf14a8eef736ce26cce3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dieSound: {fileID: 8300000, guid: 7f40340b071204540a434f9131e063b2, type: 3}
 --- !u!114 &1199331918665005438
 MonoBehaviour:
   m_ObjectHideFlags: 0
