@@ -8,11 +8,13 @@ public class Timer : MonoBehaviour
 {
     public float gameTime = 0;
     public Text timeTxt;
+    PlayerJump playerJump;
     public float lose = 1f;
     //Height heightt;
     private void Start()
     {
-      //  heightt = GameObject.Find("Manager").GetComponent<Height>();
+        playerJump = GameObject.Find("Player").GetComponent<PlayerJump>();
+        //  heightt = GameObject.Find("Manager").GetComponent<Height>();
     }
 
     private void Update()
@@ -21,12 +23,12 @@ public class Timer : MonoBehaviour
         PlayerPrefs.SetFloat("asdf", gameTime);
         timeTxt.text = " " + gameTime.ToString("F2"); 
 
-        if(gameTime > 180)
+       /* if(gameTime > 180)
         {
-
+            playerJump.EndMotion();
             SceneManager.LoadScene(5);
             Debug.Log("게임 종료");
-        }
+        }*/
     }
 
 

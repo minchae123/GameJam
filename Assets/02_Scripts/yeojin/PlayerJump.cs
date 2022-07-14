@@ -21,6 +21,8 @@ public class PlayerJump : MonoBehaviour
     public ObstacleSpawn obstacleSpawn;
     public VeSpawn veSpawn;
     //bool isChange = false;
+    bool isClear = false;
+    bool isFail = false;
 
     private void Start()
     {
@@ -36,30 +38,15 @@ public class PlayerJump : MonoBehaviour
     {
         if (heightt.height <= 44f)
         {
-            transform.position += Vector3.right * 5f * Time.deltaTime;
-            obstacleSpawn.enabled = false;
-            veSpawn.enabled = false;
-            heightt.lose = 0;
-            timer.lose = 0;
-            foreach(GameObject cake in GameObject.FindGameObjectsWithTag("Cake"))
-            {
-                Destroy(cake);
-            }
-            foreach (GameObject vet in GameObject.FindGameObjectsWithTag("Vegetable"))
-            {
-                Destroy(vet);
-            }
-            foreach (GameObject yum in GameObject.FindGameObjectsWithTag("Yummy"))
-            {
-                Destroy(yum);
-            }
-            foreach(GameObject sli in GameObject.FindGameObjectsWithTag("Clickslider"))
-            {
-                Destroy(sli);
-            }
+            EndMotion();
+            isClear = true;
         }
-
-        if(transform.position.x > 11)
+        if(timer.gameTime > 180)
+        {
+            EndMotion();
+            isFail = true;
+        }
+        if(transform.position.x > 11 && isClear == true)
         {
             SceneManager.LoadScene(4);
             /*if(timer.gameTime <= 110)
@@ -76,6 +63,11 @@ public class PlayerJump : MonoBehaviour
             }*/
         }
 
+
+        if(transform.position.x > 11 && isFail == true)
+        {
+            SceneManager.LoadScene(5);
+        }
         ChangeAni();
         if(currentAnimationController != ani.runtimeAnimatorController)
         {
@@ -130,6 +122,30 @@ public class PlayerJump : MonoBehaviour
         changeTxt.gameObject.SetActive(false);
     }
 
+    public void EndMotion()
+    {
+        transform.position += Vector3.right * 5f * Time.deltaTime;
+        obstacleSpawn.enabled = false;
+        veSpawn.enabled = false;
+        heightt.lose = 0;
+        timer.lose = 0;
+        foreach (GameObject cake in GameObject.FindGameObjectsWithTag("Cake"))
+        {
+            Destroy(cake);
+        }
+        foreach (GameObject vet in GameObject.FindGameObjectsWithTag("Vegetable"))
+        {
+            Destroy(vet);
+        }
+        foreach (GameObject yum in GameObject.FindGameObjectsWithTag("Yummy"))
+        {
+            Destroy(yum);
+        }
+        foreach (GameObject sli in GameObject.FindGameObjectsWithTag("Clickslider"))
+        {
+            Destroy(sli);
+        }
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag.CompareTo("Land") == 0)
