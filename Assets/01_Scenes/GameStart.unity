@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uC0B4 \uBE60\uC9C0\uB294 \uC88B\uC740 \uC74C\uC2DD\n\uC774 \uC74C\uC2DD\uB4E4\uACFC
+  m_Text: "[ \uC0B4 \uBE60\uC9C0\uB294 \uC88B\uC740 \uC74C\uC2DD ]\n\uC774 \uC74C\uC2DD\uB4E4\uACFC
     \uB2FF\uC73C\uBA74 \uBAB8\uBB34\uAC8C\uAC00 \uAC10\uC18C\uD569\uB2C8\uB2E4"
 --- !u!222 &1659912
 CanvasRenderer:
@@ -1990,7 +1990,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uC0B4 \uCC0C\uB294 \uC704\uD5D8\uD55C \uC74C\uC2DD\n\uC774 \uC74C\uC2DD\uACFC
+  m_Text: "[ \uC0B4 \uCC0C\uB294 \uC704\uD5D8\uD55C \uC74C\uC2DD ]\n\uC774 \uC74C\uC2DD\uACFC
     \uB2FF\uC73C\uBA74 \uBAB8\uBB34\uAC8C\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4."
 --- !u!222 &1254888840
 CanvasRenderer:
@@ -2452,7 +2452,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\uC720\uD639\uC744 \uBD80\uB974\uB294 \uC74C\uC2DD\n\uD074\uB9AD\uC744
+  m_Text: "[ \uC720\uD639\uC744 \uBD80\uB974\uB294 \uC74C\uC2DD ]\n\uD074\uB9AD\uC744
     \uC774\uC6A9\uD558\uC5EC \uC5C6\uC560\uBA74 \uBAB8\uBB34\uAC8C\uAC00 \uAC10\uC18C\uD558\uACE0\n\uC5C6\uC560\uC9C0
     \uBABB\uD558\uBA74 \uBAB8\uBB34\uAC8C\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4."
 --- !u!222 &1804021640
