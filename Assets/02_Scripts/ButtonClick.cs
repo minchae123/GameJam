@@ -10,4 +10,17 @@ public class ButtonClick : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void GoStart()
+    {
+        Debug.Log("처음으로");
+        //SceneManager.LoadScene("");
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
 }

@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class CakeClickHP : MonoBehaviour
 {
-  
     public float maxHP = 20;
     public float currentHP;
+    public float curTime;
 
     private SpriteRenderer spriteRenderer;
     CakeManager cakeManager;
@@ -31,12 +31,18 @@ public class CakeClickHP : MonoBehaviour
         {
             return;
         }
-
         hpBar.value = currentHP;
-
         if (hpBar.value < 20)
         {
-            currentHP += Time.deltaTime * 2;
+            currentHP += Time.deltaTime * 1;
+        }
+        curTime += Time.deltaTime;
+        if(curTime > 7)
+        {
+            heightt.height += 3f;
+            NextCake();
+            curTime = 0;
+            Destroy(gameObject);
         }
     }
     

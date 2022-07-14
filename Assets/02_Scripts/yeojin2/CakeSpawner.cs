@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CakeSpawner : MonoBehaviour
 {
     public GameObject ClickText;
-    public GameObject CakePref;
+    public GameObject[] CakePref;
     public GameObject CakeHPslider;
     public Transform canvasTrans;
 
@@ -46,18 +46,16 @@ public class CakeSpawner : MonoBehaviour
     private IEnumerator SpawnCake()
     {
         isSpawn = false;
+        int r = Random.Range(0, 3);
         // 케이크 생성
         Vector3 CakeSpawn = new Vector3(posX, posY, 0);
-        cakeClone = Instantiate(CakePref, CakeSpawn, Quaternion.identity);
+        cakeClone = Instantiate(CakePref[r], CakeSpawn, Quaternion.identity);
         pos=cakeClone.transform.GetChild(0);
         currentCakeClickHP = cakeClone.GetComponent<CakeClickHP>();
         currentCakeClickHP.SetHpBar(SpawnCakeHPSlider(cakeClone));
 
         yield return new WaitForSeconds(0.5f); // 4초간 대기
 
-        // 텍스트 생성
-        /*Vector3 TextSpawn = new Vector3(posX2, posY2, 0);
-        GameObject CakeText = Instantiate(ClickText, pos.position, Quaternion.identity);*/
         cakeManager.sslider.SetActive(true);
        //cakeManager.sslider.GetComponent<SliderAuto>().Setup(cakeClone.transform);
 
@@ -78,9 +76,7 @@ public class CakeSpawner : MonoBehaviour
 
         sliderClone.transform.SetParent(canvasTrans);
         //sliderClone.transform.localScale = Vector3.one;
-
         sliderClone.GetComponent<SliderAuto>().Setup(Cake.transform);
-
         return sliderClone.GetComponent<Slider>();
     }
 
