@@ -16,6 +16,7 @@ public class BoyManage : MonoBehaviour
 
     public void TouchButton()
     {
+
         if(time <= 110)
         {
             Good();

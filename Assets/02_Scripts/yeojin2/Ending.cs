@@ -44,6 +44,8 @@ public class Ending : MonoBehaviour
         {
             jonjalsilu.SetActive(false);
         }
+
+        
     }
 
     void Update()

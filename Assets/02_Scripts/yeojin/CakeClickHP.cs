@@ -37,7 +37,7 @@ public class CakeClickHP : MonoBehaviour
             currentHP += Time.deltaTime * 1;
         }
         curTime += Time.deltaTime;
-        if(curTime > 10)
+        if(curTime > 8)
         {
             heightt.height += 3f;
             NextCake();
@@ -54,7 +54,7 @@ public class CakeClickHP : MonoBehaviour
 
         if(currentHP < 0)
         {
-            heightt.height -= 2.5f;
+            heightt.height -= 1.5f;
             NextCake();
             Destroy(gameObject);
         }

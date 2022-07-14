@@ -25,11 +25,8 @@ public class CakeMove : MonoBehaviour
 
     void Update()
     {
-        if(transform.position.x > x)
-        {
             //ham.DOPath(path, duration, pathType, pathMode);
             //transform.position += (Vector3)Vector2.left * speed * Time.deltaTime;
-        }
         //transform.position = Vector3.MoveTowards(transform.position, destination, 0.04f);
     }
 

@@ -19,7 +19,7 @@ public class Vegetable : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("god");
-            heightt.height -= 1.5f;
+            heightt.height -= 0.8f;
             Destroy(gameObject);
 
             Instantiate(dieSound);

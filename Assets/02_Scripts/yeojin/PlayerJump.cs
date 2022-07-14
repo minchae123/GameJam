@@ -23,6 +23,7 @@ public class PlayerJump : MonoBehaviour
     //bool isChange = false;
     bool isClear = false;
     bool isFail = false;
+    //bool isDDong = false;
 
     private void Start()
     {
@@ -46,6 +47,11 @@ public class PlayerJump : MonoBehaviour
             EndMotion();
             isFail = true;
         }
+        if(heightt.height > 85f)
+        {
+            EndMotion();
+            isFail = true;
+        }
         if(transform.position.x > 11 && isClear == true)
         {
             SceneManager.LoadScene(4);
@@ -63,11 +69,14 @@ public class PlayerJump : MonoBehaviour
             }*/
         }
 
-
         if(transform.position.x > 11 && isFail == true)
         {
             SceneManager.LoadScene(5);
         }
+/*        if (transform.position.x > 11 && isDDong == true)
+        {
+            SceneManager.LoadScene(5);
+        }*/
         ChangeAni();
         if(currentAnimationController != ani.runtimeAnimatorController)
         {

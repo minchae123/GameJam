@@ -16,10 +16,10 @@ public class Height: MonoBehaviour
         height -= Time.deltaTime * lose;
         heighttxt.text = "¸ö¹«°Ô : " + height.ToString("F2") + "kg";
 
-        if(height >= 85f)
+        /*if(height >= 85f)
         {
             Debug.Log("½ÇÆÐ");
             //SceneManager.LoadScene("GameOver");
-        }
+        }*/
     }
 }

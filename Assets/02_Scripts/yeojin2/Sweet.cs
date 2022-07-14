@@ -5,12 +5,13 @@ using UnityEngine;
 public class Sweet : MonoBehaviour
 {
     Height heightt;
-    private AudioSource audioSource;
+/*    static AudioSource audioSource;
+    public static AudioClip touchSo;*/
 
     private void Start()
     {
         heightt = GameObject.Find("Manager").GetComponent<Height>();
-        audioSource = GetComponent<AudioSource>();
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -22,4 +23,17 @@ public class Sweet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+/*    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            Debug.Log("tru");
+            SoundPlay();
+            heightt.height += 1.5f;
+            Destroy(gameObject);
+        }
+    }*/
+
+   
 }
