@@ -9,7 +9,7 @@ public class KeyManager : MonoBehaviour
     public GameObject esc;
     private int escMenu = 0;
     Height hheight;
-    [SerializeField] private Image image = null;
+    [SerializeField] private Image image;
 
     private void Start()
     {
