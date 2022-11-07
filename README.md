@@ -21,6 +21,6 @@
 
 
 MADE BY
-이민채 [GitHub] (https://github.com/minchae123, "Go Git")
+이민채 [GitHub](https://github.com/minchae123)
 임여진 
 최예원
