@@ -21,8 +21,6 @@
 
 
 MADE BY
-Link: [GitHub][githubLink]
-[githubLink]: https://github.com/minchae123 "Go Git"
 이민채 Link: [GitHub][githubLink]
 [githubLink]: https://github.com/minchae123 "Go Git"
 임여진 
