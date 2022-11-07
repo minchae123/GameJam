@@ -21,11 +21,9 @@
 
 
 MADE BY
-[link keyword][id]
-
-[id]: URL "Optional Title here"
 Link: [GitHub][githubLink]
-[GitHubLink]: https://github.com/minchae123 "Go google"
-이민채 
+[githubLink]: https://github.com/minchae123 "Go Git"
+이민채 Link: [GitHub][githubLink]
+[githubLink]: https://github.com/minchae123 "Go Git"
 임여진 
 최예원
