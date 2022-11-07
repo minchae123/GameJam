@@ -21,6 +21,7 @@
 
 
 MADE BY
+
 이민채 [GitHub](https://github.com/minchae123)
 
 임여진 [GitHub](https://github.com/ye0jin)
