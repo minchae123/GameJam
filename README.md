@@ -20,8 +20,7 @@
 
 
 
-MADE BY
- **[이민채](https://github.com/minchae123)
+**MADE BY**
+ [이민채](https://github.com/minchae123)
  [임여진](https://github.com/ye0jin)
  [최예원](https://github.com/Choiyewon1112)
-**
