@@ -20,4 +20,12 @@
 
 
 
-made by 이민채, 임여진, 최예원
+MADE BY
+[link keyword][id]
+
+[id]: URL "Optional Title here"
+Link: [GitHub][githubLink]
+[GitHubLink]: https://github.com/minchae123 "Go google"
+이민채 
+임여진 
+최예원
