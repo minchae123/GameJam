@@ -12,7 +12,7 @@
 > 
 > 다이어트에 성공하길 바랍니다 ~ ^0^
 
-![](https://user-images.githubusercontent.com/98925762/200310201-0eede562-0267-4c44-b933-efa17d7a8a66.png){: width="30"}
+![](https://user-images.githubusercontent.com/98925762/200310201-0eede562-0267-4c44-b933-efa17d7a8a66.png){height=400px width=500px}
 
 
 
